@@ -3,4 +3,10 @@
     <string name="royal_shop">Royal Shop</string>
     <string name="tina_anderson">Tina Anderson</string>
     <string name="search_coffies">Search coffies...</string>
+    <string name="category">Category</string>
+    <string name="profile">Profile</string>
+    <string name="my_order">My order</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="cart">Cart</string>
+    <string name="explorer">Explorer</string>
 </resources>
