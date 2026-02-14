@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import ru.ichaporgin.project276.domain.BannerModel
 import ru.ichaporgin.project276.domain.CategoryModel
+import ru.ichaporgin.project276.domain.ItemsModel
 import ru.ichaporgin.project276.repository.MainRepository
 
 class MainViewModel : ViewModel() {
@@ -15,5 +16,9 @@ class MainViewModel : ViewModel() {
 
     fun loadBanner(): LiveData<MutableList<BannerModel>> {
         return repository.loadBanner()
+    }
+
+    fun loadPopular(): LiveData<MutableList<ItemsModel>> {
+        return repository.loadPopular()
     }
 }
