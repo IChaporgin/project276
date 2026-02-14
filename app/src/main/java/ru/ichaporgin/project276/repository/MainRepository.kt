@@ -6,19 +6,40 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import ru.ichaporgin.project276.domain.CategoryDomain
+import ru.ichaporgin.project276.domain.BannerModel
+import ru.ichaporgin.project276.domain.CategoryModel
 
 class MainRepository {
     private val firebaseDatabase = FirebaseDatabase.getInstance()
 
-    fun loadCategory(): LiveData<MutableList<CategoryDomain>>{
-        val listData = MutableLiveData<MutableList<CategoryDomain>>()
+    fun loadCategory(): LiveData<MutableList<CategoryModel>>{
+        val listData = MutableLiveData<MutableList<CategoryModel>>()
         val ref = firebaseDatabase.getReference("Category")
         ref.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                val list = mutableListOf<CategoryDomain>()
+                val list = mutableListOf<CategoryModel>()
                 for (childSnapshot in snapshot.children) {
-                    val item = childSnapshot.getValue(CategoryDomain::class.java)
+                    val item = childSnapshot.getValue(CategoryModel::class.java)
+                    item?.let { list.add(it) }
+                }
+                listData.value = list
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+        })
+        return listData
+    }
+
+    fun loadBanner(): LiveData<MutableList<BannerModel>>{
+        val listData = MutableLiveData<MutableList<BannerModel>>()
+        val ref = firebaseDatabase.getReference("Banner")
+        ref.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val list = mutableListOf<BannerModel>()
+                for (childSnapshot in snapshot.children) {
+                    val item = childSnapshot.getValue(BannerModel::class.java)
                     item?.let { list.add(it) }
                 }
                 listData.value = list

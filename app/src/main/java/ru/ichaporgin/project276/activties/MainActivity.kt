@@ -5,6 +5,7 @@ import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
 import ru.ichaporgin.project276.adapter.CategoryAdapter
 import ru.ichaporgin.project276.databinding.ActivityMainBinding
 import ru.ichaporgin.project276.viewModel.MainViewModel
@@ -18,6 +19,18 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initCategory()
+        initBanner()
+    }
+
+    private fun initBanner() {
+        binding.progressBarBanner.visibility = View.VISIBLE
+        viewModel.loadBanner().observeForever {
+            Glide.with(this@MainActivity)
+                .load(it[0].url)
+                .into(binding.banner)
+            binding.progressBarBanner.visibility = View.GONE
+        }
+        viewModel.loadBanner()
     }
 
     private fun initCategory() {

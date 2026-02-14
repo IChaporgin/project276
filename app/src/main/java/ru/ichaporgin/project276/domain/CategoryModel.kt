@@ -1,6 +1,6 @@
 package ru.ichaporgin.project276.domain
 
-data class CategoryDomain(
+data class CategoryModel(
     val title: String = "",
     val id: Int = 0,
 )

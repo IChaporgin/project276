@@ -8,10 +8,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ru.ichaporgin.project276.R
 import ru.ichaporgin.project276.databinding.ViewholderCategoryBinding
-import ru.ichaporgin.project276.domain.CategoryDomain
+import ru.ichaporgin.project276.domain.CategoryModel
 
 class CategoryAdapter(
-    val items: MutableList<CategoryDomain>
+    val items: MutableList<CategoryModel>
 ) : RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
 
     private lateinit var context: Context
