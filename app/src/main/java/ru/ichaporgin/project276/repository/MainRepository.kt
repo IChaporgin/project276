@@ -13,7 +13,7 @@ class MainRepository {
 
     fun loadCategory(): LiveData<MutableList<CategoryDomain>>{
         val listData = MutableLiveData<MutableList<CategoryDomain>>()
-        val ref = firebaseDatabase.getReference("category")
+        val ref = firebaseDatabase.getReference("Category")
         ref.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val list = mutableListOf<CategoryDomain>()

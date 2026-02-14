@@ -48,10 +48,10 @@ class CategoryAdapter(
         Handler(Looper.getMainLooper()).postDelayed({}, 500)
 
         if (selectedPosition == position){
-            holder.binding.titleCat.setBackgroundColor(R.drawable.brown_full_corner)
+            holder.binding.titleCat.setBackgroundResource(R.drawable.brown_full_corner)
             holder.binding.titleCat.setTextColor(context.resources.getColor(R.color.white))
         } else {
-            holder.binding.titleCat.setBackgroundColor(R.drawable.cream_full_corner)
+            holder.binding.titleCat.setBackgroundResource(R.drawable.cream_full_corner)
             holder.binding.titleCat.setTextColor(context.resources.getColor(R.color.darkBrown))
         }
     }
