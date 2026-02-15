@@ -1,12 +1,15 @@
 package ru.ichaporgin.project276.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.os.Handler
 import android.os.Looper
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import ru.ichaporgin.project276.R
+import ru.ichaporgin.project276.activties.ItemListActivity
 import ru.ichaporgin.project276.databinding.ViewholderCategoryBinding
 import ru.ichaporgin.project276.domain.CategoryModel
 
@@ -36,16 +39,23 @@ class CategoryAdapter(
         return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: CategoryAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
         holder.binding.titleCat.text = item.title
+
         holder.binding.root.setOnClickListener {
+
             lastSelectedPosition = selectedPosition
             selectedPosition = position
             notifyItemChanged(lastSelectedPosition)
             notifyItemChanged(selectedPosition)
+
+            val intent = Intent(context, ItemListActivity::class.java).apply {
+                putExtra("id", item.id.toString())
+                putExtra("title", item.title)
+            }
+            ContextCompat.startActivity(context, intent, null)
         }
-        Handler(Looper.getMainLooper()).postDelayed({}, 500)
 
         if (selectedPosition == position){
             holder.binding.titleCat.setBackgroundResource(R.drawable.brown_full_corner)

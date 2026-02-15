@@ -11,9 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project276">
         <activity
+            android:name=".activties.ItemListActivity"
+            android:exported="false" />
+        <activity
             android:name=".activties.SplashActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".activties.MainActivity"
             android:exported="true">
