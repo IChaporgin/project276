@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     private fun initPopular() {
         binding.progressBarPopular.visibility = View.VISIBLE
         viewModel.loadPopular().observeForever {
-            binding.popularView.layoutManager = GridLayoutManager(this@MainActivity, 2)
+            binding.popularView.layoutManager = GridLayoutManager(this, 2)
             binding.popularView.adapter = ItemsAdapter(it)
             binding.progressBarPopular.visibility = View.GONE
         }

@@ -30,9 +30,9 @@ class ItemsAdapter(val items: MutableList<ItemsModel>) :
         holder.binding.priceTxt.text = "$" + items[position].price.toString()
         holder.binding.subtitleTxt.text = items[position].extra
 
-        Glide.with(context)
+        Glide.with(holder.itemView.context)
             .load(items[position].picUrl[0])
-            .into(holder.binding.pic)
+            .into(holder.binding.imageView2)
     }
 
     override fun getItemCount(): Int = items.size
