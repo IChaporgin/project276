@@ -14,9 +14,6 @@
             android:name=".activties.DetailActivity"
             android:exported="false" />
         <activity
-            android:name=".activties.MainActivity2"
-            android:exported="false" />
-        <activity
             android:name=".activties.ItemListActivity"
             android:exported="false" />
         <activity

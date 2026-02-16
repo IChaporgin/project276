@@ -44,7 +44,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:layout_weight="1"
-                        android:text="Back"
+                        android:text="@string/back"
                         android:textColor="@color/black" />
 
                     <ImageView
@@ -84,7 +84,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="Coffee size"
+                android:text="@string/coffee_size"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -103,7 +103,7 @@
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Small"
+                    android:text="@string/small"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
 
@@ -113,7 +113,7 @@
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Medium"
+                    android:text="@string/medium"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
 
@@ -123,7 +123,7 @@
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Large"
+                    android:text="@string/large"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -139,7 +139,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="16dp"
-                    android:text="Qty."
+                    android:text="@string/qty"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -170,7 +170,7 @@
                         android:layout_width="28dp"
                         android:layout_height="28dp"
                         android:gravity="center"
-                        android:text="+"
+                        android:text="@string/plus"
                         android:textColor="@color/black"
                         android:textSize="22sp"
 
@@ -183,7 +183,7 @@
                         android:layout_width="28dp"
                         android:layout_height="28dp"
                         android:gravity="center"
-                        android:text="-"
+                        android:text="@string/minus"
                         android:textColor="@color/black"
                         android:textSize="22sp"
 
@@ -243,7 +243,7 @@
                     android:textColor="@color/white"
                     android:layout_width="190dp"
                     android:layout_height="50dp"
-                    android:text="Add to Cart"
+                    android:text="@string/add_to_cart"
                     android:textStyle="bold"
                     android:textSize="18sp"
                     android:layout_margin="16dp"
