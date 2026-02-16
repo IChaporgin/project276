@@ -1,12 +1,15 @@
 package ru.ichaporgin.project276.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import ru.ichaporgin.project276.activties.DetailActivity
 import ru.ichaporgin.project276.databinding.ViewholderItemBinding
 import ru.ichaporgin.project276.domain.ItemsModel
+import kotlin.jvm.java
 
 class ItemsAdapter(val items: MutableList<ItemsModel>) :
     RecyclerView.Adapter<ItemsAdapter.ViewHolder>() {
@@ -33,6 +36,12 @@ class ItemsAdapter(val items: MutableList<ItemsModel>) :
         Glide.with(holder.itemView.context)
             .load(items[position].picUrl[0])
             .into(holder.binding.imageView2)
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, DetailActivity::class.java)
+            intent.putExtra("object", items[position])
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int = items.size
