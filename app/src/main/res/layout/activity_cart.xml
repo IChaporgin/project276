@@ -49,7 +49,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
-                        android:text="Back"
+                        android:text="@string/back"
                         android:textColor="@color/darkBrown" />
                 </LinearLayout>
 
@@ -159,7 +159,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Total Tax"
+                android:text="@string/total_tax"
                 android:textColor="@color/darkBrown"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -212,7 +212,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Total Tax"
+                android:text="@string/total"
                 android:textColor="@color/darkBrown"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -237,7 +237,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:background="@drawable/brown_full_corner"
-            android:text="Procced to checkout"
+            android:text="@string/procced_to_checkout"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />

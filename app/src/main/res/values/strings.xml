@@ -21,4 +21,7 @@
     <string name="delivery">Delivery</string>
     <string name="enter_your_discount_code">Enter your discount code</string>
     <string name="apply">Apply</string>
+    <string name="total_tax">Total Tax</string>
+    <string name="total">Total</string>
+    <string name="procced_to_checkout">Procced to checkout</string>
 </resources>
