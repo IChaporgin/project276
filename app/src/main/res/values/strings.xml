@@ -18,4 +18,7 @@
     <string name="plus">+</string>
     <string name="minus">-</string>
     <string name="add_to_cart">Add to Cart</string>
+    <string name="delivery">Delivery</string>
+    <string name="enter_your_discount_code">Enter your discount code</string>
+    <string name="apply">Apply</string>
 </resources>
