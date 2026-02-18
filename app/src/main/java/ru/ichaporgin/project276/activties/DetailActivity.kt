@@ -70,20 +70,20 @@ class DetailActivity : AppCompatActivity() {
             ratingTxt.text = item.rating.toString()
 
             addToCartBtn.setOnClickListener {
-                item.numberInCart = Integer.valueOf(numberInCart.text.toString())
+                item.numberInCart = Integer.valueOf(numberInCartTxt.text.toString())
                 managmentCart.insertItems(item)
             }
 
             backBtn.setOnClickListener { finish() }
 
             plusBtn.setOnClickListener {
-                numberInCart.text = (item.numberInCart + 1).toString()
+                numberInCartTxt.text = (item.numberInCart + 1).toString()
                 item.numberInCart++
             }
 
             minusBtn.setOnClickListener {
                 if (item.numberInCart > 0) {
-                    numberInCart.text = (item.numberInCart - 1).toString()
+                    numberInCartTxt.text = (item.numberInCart - 1).toString()
                     item.numberInCart--
                 }
             }

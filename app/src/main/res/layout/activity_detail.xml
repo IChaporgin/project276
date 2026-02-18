@@ -152,7 +152,7 @@
                     android:background="@drawable/lightbrown_bg">
 
                     <TextView
-                        android:id="@+id/numberInCart"
+                        android:id="@+id/numberInCartTxt"
                         android:layout_width="28dp"
                         android:layout_height="28dp"
                         android:gravity="center"
