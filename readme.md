@@ -32,4 +32,4 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone <URL_репозитория>
+   git clone https://github.com/IChaporgin/project276.git
